@@ -1,0 +1,1 @@
+docker build -f ./msa/web-ui/target/Dockerfile . -t ilirium/tb-web-ui:3.2.0

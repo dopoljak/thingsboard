@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  ilirium_tb-web-ui:
+    container_name: ilirium_tb-web-ui
+    image: docker-registry.ilirium.xyz/ilirium/tb-web-ui:3.2.0
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 15000:80
+    networks:
+      - net_home_server
+      
+
+networks:
+  net_home_server:
+    external: true
